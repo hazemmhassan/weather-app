@@ -1,0 +1,40 @@
+# Weather App — Dependency Reference
+# Built by Hazem Hassan
+# ──────────────────────────────────────────────────────────────────
+# This is a Node.js project. Use npm to install dependencies.
+# Run "npm install" inside /backend and /frontend separately.
+# ──────────────────────────────────────────────────────────────────
+
+# ── BACKEND (backend/package.json) ────────────────────────────────
+express       ^4.18.2   # HTTP server & routing
+mysql2        ^3.6.5    # MySQL client with promise support
+axios         ^1.6.0    # HTTP client for external APIs
+cors          ^2.8.5    # Cross-Origin Resource Sharing middleware
+dotenv        ^16.3.1   # Environment variable loader
+json2csv      ^5.0.7    # JSON → CSV conversion
+pdfkit        ^0.14.0   # PDF generation
+
+# Dev dependencies
+nodemon       ^3.0.2    # Auto-restart on file change (dev only)
+
+# ── FRONTEND (frontend/package.json) ─────────────────────────────
+react         ^18.2.0   # UI library
+react-dom     ^18.2.0   # DOM renderer
+react-scripts  5.0.1    # CRA build toolchain
+axios         ^1.6.0    # API calls to backend
+leaflet       ^1.9.4    # Interactive maps
+react-leaflet ^4.2.1    # React bindings for Leaflet
+
+# ── EXTERNAL SERVICES (no keys required) ─────────────────────────
+# Open-Meteo       https://api.open-meteo.com/v1/forecast
+# Open-Meteo Arch  https://archive-api.open-meteo.com/v1/archive
+# Nominatim        https://nominatim.openstreetmap.org/search
+# OpenStreetMap    https://tile.openstreetmap.org  (map tiles)
+
+# ── EXTERNAL SERVICES (key required) ─────────────────────────────
+# YouTube Data API v3  — key set in backend/.env  YOUTUBE_API_KEY
+
+# ── SYSTEM REQUIREMENTS ───────────────────────────────────────────
+# Node.js  >= 18.x
+# npm      >= 9.x
+# MySQL    >= 8.0
