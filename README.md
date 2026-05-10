@@ -247,80 +247,11 @@ The app handles all failure modes with clear user-facing messages:
 | Invalid date range | "Please enter a valid date range (max 14 days)." |
 | API failure | "Unable to fetch weather data. Please try again." |
 | Database error | "Unable to update/delete record. Please try again." |
-
----
-
-## Features Checklist
-
-### ✅ Frontend Requirements
-- [x] Search bar: location + date range input
-- [x] Current weather display with WMO icons
-- [x] 5-day (7-day) forecast horizontal layout
-- [x] Interactive Leaflet map
-- [x] YouTube videos section
-- [x] CRUD UI: Create (search), Read (table), Update (edit button), Delete (delete button)
-- [x] Export buttons: JSON, CSV, PDF, XML, Markdown
-- [x] Error handling with clear messages
-- [x] Responsive design (mobile/tablet/desktop)
-- [x] "Built by Hazem Hassan" + PM Accelerator description
-- [x] Geolocation auto-detection on load
-
-### ✅ Backend Requirements
-- [x] REST API with CRUD endpoints
-- [x] MySQL database (`weather_searches` table)
-- [x] Open-Meteo API integration (weather fetch)
-- [x] Nominatim geocoding with fuzzy fallback
-- [x] Date validation (max 14 days)
-- [x] JSON data storage in DB
-- [x] Export: JSON, CSV, PDF, XML, Markdown
-- [x] YouTube API search proxy
-- [x] Map coordinates endpoint
-- [x] Error handling for all edge cases
-
-### ✅ Tech Assessment Coverage
-- **Assessment 1:** Full-stack CRUD app with database, API, frontend
-- **Assessment 2:** Additional features (maps, videos, exports, geolocation, fuzzy matching)
-
----
-
-## Development Notes
-
-### Auto-reload
-- **Backend:** Nodemon watches `/backend/src/**` for changes
-- **Frontend:** CRA dev server hot-reloads on file save
-
-### Browser DevTools
-- Open http://localhost:3000 in Chrome/Firefox
-- Network tab shows all API calls to `/api/*`
-- Console shows errors and logs
-
-### Database Inspection
-```bash
-mysql -u root -p weather_app
-SELECT * FROM weather_searches ORDER BY created_at DESC;
-```
-
----
-
-## Production Build
-
-### Backend
-No extra build step — runs directly with Node.
-
-### Frontend
-```bash
-cd frontend
-npm run build    # Creates optimized /build folder
-```
-
-Deploy `/build` contents to your static host (Vercel, Netlify, S3, etc).  
-Update API endpoint in App.jsx if backend is on different domain.
-
 ---
 
 ## License & Attribution
 
-**Built by Hazem Hassan** for Assessment Internship 2.
+**Built by Hazem Hassan**.
 
 Data sources:
 - **Open-Meteo:** https://open-meteo.com (weather, no key required)
