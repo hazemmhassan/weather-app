@@ -113,59 +113,29 @@ weather-app/
 
 ---
 
-## Quick Start
+## How to Run
 
 ### Prerequisites
-- Node.js 18+
-- npm 9+
-- MySQL 8+
+- Node.js installed
+- MySQL installed (or XAMPP)
+- YouTube Data API v3 key
 
-### 1. Database Setup
+### Database Setup
+1. Create a database called `weather_app` in MySQL
+2. Run the schema: import `backend/src/db/schema.sql` into your database
 
-```bash
-mysql -u root -p < weather-app/backend/src/db/schema.sql
-```
+### Backend Setup
+1. cd backend
+2. npm install
+3. Copy .env.example to .env and fill in your values
+4. npm run dev — runs on http://localhost:5000
 
-Creates database `weather_app` with `weather_searches` table.
-
-### 2. Backend
-
-```bash
-cd weather-app/backend
-
-# Copy and configure environment
-cp .env.example .env
-# Edit .env: set DB_PASSWORD to your MySQL password
-
-npm install
-npm run dev    # Starts on http://localhost:5000
-```
-
-**Output:**
-```
-✅ MySQL connected successfully
-🚀 Server running on http://localhost:5000
-```
-
-### 3. Frontend
-
-```bash
-cd weather-app/frontend
-
-npm install
-npm start      # Starts on http://localhost:3000
-```
-
-**Output:**
-```
-Compiled successfully!
-You can now view weather-app-frontend in the browser at http://localhost:3000
-```
-
-The React dev server proxies `/api/*` to the backend (set in `package.json` as `"proxy"`)
+### Frontend Setup
+1. cd frontend
+2. npm install
+3. npm start — runs on http://localhost:3000
 
 ---
-
 ## API Endpoints
 
 ### Weather CRUD
@@ -247,11 +217,12 @@ The app handles all failure modes with clear user-facing messages:
 | Invalid date range | "Please enter a valid date range (max 14 days)." |
 | API failure | "Unable to fetch weather data. Please try again." |
 | Database error | "Unable to update/delete record. Please try again." |
+
 ---
 
 ## License & Attribution
 
-**Built by Hazem Hassan**.
+**Built by Hazem Hassan** for Assessment Internship 2.
 
 Data sources:
 - **Open-Meteo:** https://open-meteo.com (weather, no key required)
@@ -260,9 +231,4 @@ Data sources:
 - **YouTube Data API v3:** https://developers.google.com/youtube/v3 (videos, key required)
 
 ---
-
-## Support
-
-For issues or questions, review the error messages in the browser console and server logs.  
-Check API responses in DevTools Network tab to diagnose backend issues.
 
